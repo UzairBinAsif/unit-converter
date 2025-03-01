@@ -110,9 +110,6 @@ time_conversion = {
 }
 
 
-
-# CHAT CODE
-
 st.title('Unit Convertor 🚀')
 
 def convert_units(value, from_unit, to_unit, conversion_dict):
@@ -154,13 +151,10 @@ elif category == "Time":
     conversion_dict = time_conversion
 
 
-
-# User input fields
 value = st.number_input("Enter the value to convert:", format="%0f")
 from_val_unit = st.selectbox("From Unit:", list(conversion_dict.keys()))
 to_unit = st.selectbox("To Unit:", list(conversion_dict.keys()))
 
-# Perform conversion when button is clicked
 if st.button("Convert"):
     result = convert_units(value, from_val_unit, to_unit, conversion_dict)
     st.write(f'Result: {result} {to_unit}')
